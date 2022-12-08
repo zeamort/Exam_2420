@@ -9,8 +9,8 @@ sudo apt upgrade
 
 ## Part 2:
 Edited the code from the first picture to the second using vim and the shortcuts built into it:
-![before]("./images/part2-1.png")
-![after]("./images/part2-2.png")
+![before](./images/part2-1.png)
+![after](./images/part2-2.png)
 - fixed the echo misspelling by search and replace. Navigate to the first eco then use ciw to change inner word and fix to echo. Then I hit ESC, hit N and hit . until I fixed all of the typos.
 - /numbs and hit enter to replace with :digit:
 - used ciw for V and the original 0 to 1 quickly.
@@ -19,14 +19,14 @@ Edited the code from the first picture to the second using vim and the shortcuts
 In order to get journalctl to do the following:
 
 - print logs for the current boot
-![current boot]("./images/part3-0.png")
+![current boot](./images/part3-0.png)
 Used vim's slash to search for current and boot
 - logs should have a priority of warning (4) or more important
-![priority]("./images/part3-3.png")
+![priority](./images/part3-3.png)
 Used vim's search for priority and came up pretty quickly. It specified the types of priority and the input number for warning was 4.
 - output in a nice pretty json.
-![output]("./images/part3-1.png")
-![pretty json]("./images/part3-2.png")
+![output](./images/part3-1.png)
+![pretty json](./images/part3-2.png)
 Used vim's search for json and both normal json and pretty json were next to eachother, then scrolled up to see that you have to put it as part of --output=
 
 use the following command:
@@ -45,7 +45,7 @@ echo >> motd
 echo 'Users currently logged in are:' >> motd
 who | awk '{print $1}' >> motd
 ```
-![output]('./images/part4-1.png')
+![output](./images/part4-1.png)
 
 ## Part 5:
 user-monitor.service file created in /etc/systemd/system/user-monitor.service:
@@ -76,4 +76,4 @@ systemctl status user-monitor.service
 systemctl enable user-monitor.service
 ```
 Ran into some issue why it wasn't activating and now I am out of time.
-![image alt]('./images/part4-2.png')
+![image alt](./images/part4-2.png)
